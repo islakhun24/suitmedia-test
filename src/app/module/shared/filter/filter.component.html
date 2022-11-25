@@ -1,0 +1,29 @@
+<div class="d-flex flex-row justify-content-between">
+  <div class="sub-title">
+    Showing {{response.meta.from}}-{{response.meta.to}} of {{response.meta.total}}
+  </div>
+  <div class="d-flex flex-row gap-3">
+    <div class="d-flex fllex-row gap-2 align-items-center">
+      <div class="sub-title">
+      Show per page:
+    </div>
+    <div>
+      <select class="form-select"  [(ngModel)]="selectPageSize" (change)="onChangePageSize($event)" aria-label="Default select example">
+        <option value="10">10</option>
+        <option value="20">20</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+    </div>
+    <div class="d-flex fllex-row gap-2 align-items-center">
+      <div class="sub-title">
+        Sort by:
+      </div>
+      <div>
+        <select class="form-select"  [(ngModel)]="sort.value" (change)="onChangeSort($event)" aria-label="Default select example">
+          <option *ngFor="let item of arraySort" [ngValue]="item.value">{{item.label}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
+</div>

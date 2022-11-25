@@ -1,0 +1,8 @@
+.content{
+  scroll-behavior: smooth;
+  overflow-y: auto !important;
+  ::-webkit-scrollbar {
+    display: none;
+}
+  height: 90vh;
+}

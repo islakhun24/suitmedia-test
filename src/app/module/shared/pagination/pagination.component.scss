@@ -1,0 +1,19 @@
+@import '../../../../assets/styles/variable.scss';
+
+.custom .pagination>li>div>button,
+.custom .pagination>li>div>span {
+  border: none !important;
+}
+.pagination>li>div.active>button {
+  background: $color-primary;
+  color: #fff;
+  cursor: default;
+  border-radius: 4px;
+}
+.pagination>li>div.disable>button {
+  background: #f1f1f1;
+  color: #fff;
+  color: grey;
+  border-radius: 4px;
+  cursor: not-allowed;
+}

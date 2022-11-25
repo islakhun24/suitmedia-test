@@ -1,0 +1,39 @@
+<div class="d-flex flex-column body" scroll>
+  <div class="parallax">
+    <div class="title">
+      <div style="font-size: 4rem;">Ideas</div>
+      <div style="font-size: 1.5rem;">Where all our great things begin</div>
+    </div>
+    <div class="section">
+
+    </div>
+  </div>
+  <div  class="content-outer">
+    <div class="content-inner">
+      <div class="container mt-3 mb-3">
+        <app-filter
+        *ngIf="response"
+            [response]="response"
+            [sort]="sortObject"
+            [arraySort]="arraySort"
+            [selectPageSize]="size"
+            (getPageSize)="getPageSize($event)"
+            (getSort)="getSort($event)"
+            ></app-filter>
+        <div class="mt-3 b-3 row">
+          <app-shimer-loading *ngIf="isLoading"></app-shimer-loading>
+          <div  class="row" *ngIf="!isLoading">
+            <div class="col-md-3 col-12 mt-3 mb-3" *ngFor="let item of response?.data" >
+              <app-card-item    [detail]="item"></app-card-item>
+            </div>
+          </div>
+
+        </div>
+       <div class="d-flex justify-content-center mt-5 mb-5">
+        <app-pagination *ngIf="response" [response]="response" (getPage)="getPage($event)" [meta]="response.meta" [link]="response.links"></app-pagination>
+       </div>
+      </div>
+    </div>
+  </div>
+
+</div>

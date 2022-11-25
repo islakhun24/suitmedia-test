@@ -1,0 +1,32 @@
+.navbar {
+  position: absolute !important;
+  top:0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: 9999999;
+}
+.nav{
+	position: relative;
+	display: flex;
+}
+
+.nav .nav-item {
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+	font-family: arial;
+	font-size: 1em;
+	color: #fff;
+	cursor: pointer;
+	margin: 0px 20px;
+}
+
+.nav .nav-indicator{
+	position: absolute;
+	bottom: -8px;
+	left: 0;
+	background-color:#fff;
+	width: 0;
+	height: 3px;
+	transition: 0.5s;
+}
